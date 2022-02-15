@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Italiana&family=Licorice&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Great+Vibes&family=Italiana&family=Licorice&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
     <header>
-      <nav>
+      <nav class="navigation">
+       
+       
       <span>Lavoixlà</span>
+      
+      <input type="checkbox" name="burger" id="burger">
       <ul class="nav-menu">
-        <li><a href="./index.html">Accueil</a></li>
-        <li><a href="./demos.html">Démos</a></li>
-        <li><a href="./about.html">A propos</a></li>
-        <li><a href="./tarifs.html">Mes services</a></li>
-        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="#accueil" id="ite">Accueil</a></li>
+        <li><a href="#about" id="ite">A propos</a></li>
+        <li><a href="#demos" id="ite">Démos</a></li>
+        <li><a href="./tarifs.html" id="ite">Mes services</a></li>
+        <li><a href="./contact.html" id="ite">Contact</a></li>
       </ul>
+      <label for="burger">
+        <div class="item-nav"></div>
+        <div class="item-nav"></div>
+        <div class="item-nav"></div>
+       </label>
         <div class="media">
           <img src="images/instagram.png" alt="lavoixla instagram">
           <img src="images/tik-tok.png" alt="lavoixla tiktok">
@@ -30,7 +40,7 @@
         </div>
       </nav>  
     </header> 
-    <main>
+    <main id="accueil">
         <div class="text-presentation">
             <div class="title-presentation">
                 <p class="lavoixla">Lavoixl<span>à</span></p>
@@ -38,8 +48,106 @@
             </div>
             <p class="text-landing">Notre maison met à l'honneur les spécialités traditionnelles des Flandres, dont le merveilleux. Nos produits sont fabriqués dans chaque
             boutique de manière artisanale à la vue du client. Le Merveilleux de Frédéric Vaucamps, est un dessert incontournable de notre établissement.</p>
-            <button class="demos-button">Voir mes démos</button>
+            <a href="#demos"><button class="demos-button">Voir mes démos</button></a>
         </div>
+
+        
     </main> 
+
+    <section class="about" id="about">
+      <div class="title-display">
+        <div class="title-description">
+          <h1 class="titleSection">A propos de moi </h1>
+          <h3 class="mini-title left-title">Apprends à me connaître !</h3>
+        </div>
+        
+      </div>
+      <div class="main-About">
+        <img class="aboutMe" src="/images/undraw_about_me_re_82bv.svg" alt="">
+        <div class="square">
+          <p class="aboutMe-text">
+            Je suis comédienne voix off auteur compositeur, chanteuse et comédienne dans un spectacle pour enfant en one man ! Par la diversité de mes aptitudes, Je m’adapte à tous vos projets.  Je suis capable de proposer un large panel de voix ce qui fait de ma voix une voix « caméléon ». Je peux faire plus d’une vingtaine de voix, de la voix grave d’une  vieille dame comme la voix juvénile d’un petit enfant. 
+
+Ma plus grande satisfaction est d’embellir vos projets en y apportant également ma créativité. 
+
+
+          </p>
+          <p class="aboutMe-text">N’hésitez pas à me contacter </p>
+          <a href="#"><button class="demos-button">Me contacter</button></a>
+          
+        </div>
+      </div>
+    </section>
+    <section class="demos">
+      <div class="title-display">
+        <div class="title-description">
+          <h1 class="titleSection">Mes démos </h1>
+          <h3 class="mini-title right-title">Ecoutes ma voix!</h3>
+        </div>
+        
+      </div>
+
+      <div class="carousel" id="demos">
+        <figure>
+          <div class="card">
+            <img src="/images/alison-wang-mou0S7ViElQ-unsplash.jpg" alt="" >
+            <p class="title-card">Dessin animé</p>
+            <audio controls src="/audio/Maquette_doublage_animes_dinosaure_je_fais_toutes_les_voix.mp3"></audio>
+          </div>
+         
+          <div class="card">
+            <img src="/images/alison-wang-mou0S7ViElQ-unsplash.jpg" alt="" >
+            <p class="title-card">Dessin animé</p>
+            <audio controls src="/audio/Maquette_doublage_animes_dinosaure_je_fais_toutes_les_voix.mp3"></audio>
+          </div>
+          <div class="card">
+            <img src="/images/alison-wang-mou0S7ViElQ-unsplash.jpg" alt="" >
+            <p class="title-card">Dessin animé</p>
+            <audio controls src="/audio/Maquette_doublage_animes_dinosaure_je_fais_toutes_les_voix.mp3"></audio>
+          </div>
+          <div class="card">
+            <img src="/images/alison-wang-mou0S7ViElQ-unsplash.jpg" alt="" >
+            <p class="title-card">Dessin animé</p>
+            <audio controls src="/audio/Maquette_doublage_animes_dinosaure_je_fais_toutes_les_voix.mp3"></audio>
+          </div>
+          <div class="card">
+            <img src="/images/alison-wang-mou0S7ViElQ-unsplash.jpg" alt="" >
+            <p class="title-card">Dessin animé</p>
+            <audio controls src="/audio/Maquette_doublage_animes_dinosaure_je_fais_toutes_les_voix.mp3"></audio>
+          </div>
+          <div class="card">
+            <img src="/images/alison-wang-mou0S7ViElQ-unsplash.jpg" alt="" >
+            <p class="title-card">Dessin animé</p>
+            <audio controls src="/audio/Maquette_doublage_animes_dinosaure_je_fais_toutes_les_voix.mp3"></audio>
+          </div>
+          <div class="card">
+            <img src="/images/alison-wang-mou0S7ViElQ-unsplash.jpg" alt="" >
+            <p class="title-card">Dessin animé</p>
+            <audio controls src="/audio/Maquette_doublage_animes_dinosaure_je_fais_toutes_les_voix.mp3"></audio>
+          </div>
+          <div class="card">
+            <img src="/images/alison-wang-mou0S7ViElQ-unsplash.jpg" alt="" >
+            <p class="title-card">Dessin animé</p>
+            <audio controls src="/audio/Maquette_doublage_animes_dinosaure_je_fais_toutes_les_voix.mp3"></audio>
+          </div>
+        </figure>
+        <nav>
+          <button class="nav prev">Prev</button>
+          <button class="nav next">Next</button>
+        </nav>
+      </div>
+    </section>
+
+    <section class="refs">
+      <div class="title-display">
+        <div class="title-description">
+          <h1 class="titleSection">Mes références</h1>
+          <h3 class="mini-title left-title">Voici mes projets !</h3>
+        </div>
+        
+      </div>
+    </section>
+    
+    <script src="/index.js"></script>
 </body>
 </html>

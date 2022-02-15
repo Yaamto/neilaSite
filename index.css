@@ -1,5 +1,16 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin : 0;
+    
+}
+section {
+    height: 80vh;
+}
+
+main {
     background-image:  linear-gradient(
         rgba(0, 0, 0, 0.7), 
         rgba(0, 0, 0, 0.7)
@@ -7,19 +18,27 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
+    height: 80vh;
+    padding-top: 20vh;
     background-repeat: no-repeat;
     
+    
+}
+a:visited {
+    color: black;
 }
 
 .nav-menu {
     display: flex;
+    
     list-style: none;
     gap: 20px;
+    transition: max-height .2s ease-out;
+    
 }
 .nav-menu li {
 
-    
+    color: black;
     font-size: 20px;
 }
 .nav-menu li a {
@@ -30,12 +49,16 @@ nav span {
     font-size: 40px;
     font-family: 'Licorice', cursive;
 }
-nav {
+.navigation {
+    scroll-behavior:smooth;
     display: flex;
     justify-content: space-between;
     font-family: 'Dosis', sans-serif;
     align-items: center;
     background-color: white;
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
 }
 .media {
   
@@ -54,9 +77,12 @@ nav {
     flex-direction:column;
     color: white;
     align-items: center;
+    width: fit-content;
+    margin-left: 200px;
     
     
 }
+
 .title-presentation {
     display: flex;
     flex-direction: column;
@@ -103,4 +129,311 @@ font-size:  20fpx;
     
     background-color: white;
     color : black;
+}
+.test {
+    display: flex;
+    flex-direction: column;
+}
+.sectionTitle {
+    font-size: 64px;
+    font-family: 'Great Vibes', cursive;
+    letter-spacing: 0.2em;
+    text-align: center;
+  
+    font-weight: 200;
+}
+
+.about {
+    height: 100vh;
+}
+.titleSection{
+    font-size: 64px;
+    font-family: 'Great Vibes', cursive;
+    letter-spacing: 0.2em;
+    margin-bottom: 0px;
+    font-weight: 200;
+    text-align: center;
+
+}
+.left-title::before {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 40%;
+    background-color: black;
+    margin-right: 20px;
+   
+}
+.right-title {
+    text-align:end;
+    
+    
+}
+.right-title::after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 45%;
+    background-color: black;
+    margin-left: 20px;
+
+}
+
+.mini-title{
+    font-family: 'Dosis', sans-serif;
+    
+    font-size: 30px;
+    margin-top: 0px;
+}
+.aboutMe {
+    width: 525px;
+    height: 399px;
+}
+.main-About{
+    margin: 100px 20px 0px 20px;
+    display: flex;
+    justify-content: space-around;
+    padding:40px
+}
+
+.aboutMe-text{
+    width :auto;
+    max-width: 785px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    font-family: 'Dosis', sans-serif;
+    
+}
+.square {
+    background-color: #363636;
+    border-radius: 50px;
+    padding: 10px 50px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media screen and (max-width: 1200px) {
+    .main-About{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        padding-top: 20px;
+    }
+    .aboutMe {
+        width: 400px;
+       
+        
+    }
+    .text-presentation{
+        margin-left: 50vw;
+        transform: translate(-50%);
+    }
+  }
+  @media screen and (max-width: 921px) {
+    .main-About{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        padding-top: 20px;
+        padding: 20px 0 40px 0;
+    }
+    .aboutMe {
+        width: 300px;
+        height: 300px;
+    }
+    .aboutMe-text {
+        font-size: 20px;
+    }
+    .lavoixla{
+        font-size: 60px;
+        letter-spacing: 14px ;
+    }
+    .text-landing{
+        font-size: 20px;
+        width: 70vw;
+    }
+  }
+  @media screen and (max-width: 529px) {
+    .main-About{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        padding-top: 20px;
+        padding: 20px 0 40px 0;
+    }
+    .aboutMe {
+        width: 300px;
+        height: 200px;
+    }
+    .aboutMe-text {
+        font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .main-About{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        padding-top: 20px;
+        padding: 20px 0 40px 0;
+    }
+    .aboutMe {
+        display: none;
+    }
+    .aboutMe-text {
+        font-size: 20px;
+    }
+    .square {
+        padding: 15px;
+    }
+  }
+ 
+
+.carousel {
+    padding: 20px;
+    perspective: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+.carousel > * {
+    flex: 0 0 auto;
+}
+.carousel figure {
+    margin: 0;
+    width: 400px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    transform-origin: 50% 50% -482.8427124746px;
+}
+.carousel figure .card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 40px;
+    opacity: 0.9;
+}
+.carousel figure .card:not(:first-of-type) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: 50% 50% -482.8427124746px;
+}
+.carousel figure .card:nth-child(2) {
+    transform: rotateY(0.7853981634rad);
+}
+.carousel figure .card:nth-child(3) {
+    transform: rotateY(1.5707963268rad);
+}
+.carousel figure .card:nth-child(4) {
+    transform: rotateY(2.3561944902rad);
+}
+.carousel figure .card:nth-child(5) {
+    transform: rotateY(3.1415926536rad);
+}
+.carousel figure .card:nth-child(6) {
+    transform: rotateY(3.926990817rad);
+}
+.carousel figure .card:nth-child(7) {
+    transform: rotateY(4.7123889804rad);
+}
+.carousel figure .card:nth-child(8) {
+    transform: rotateY(5.4977871438rad);
+}
+.carousel nav {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0;
+    
+}
+.carousel nav button {
+    flex: 0 0 auto;
+    margin: 0 20px;
+    cursor: pointer;
+    color: #333;
+    background: none;
+    border: 1px solid;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+.card p{
+    text-align: center;
+    position: relative;
+}
+
+.title-card{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    border-bottom: solid 1px black;
+}
+
+
+/* MENU NAV BURGER  */
+
+input[type='checkbox'] {
+ display: none;
+}
+.item-nav {
+    width: 20px;
+    height: 2px;
+    margin: 5px;
+    background-color: black;
+}
+
+nav label{
+    cursor: pointer;
+    display:none;
+}
+
+
+@media screen and (max-width: 921px) {
+
+  
+    .media {
+       display: none;
+    }
+    nav label {
+        margin-top: 10px;
+        margin-right: 15px;
+        display: block;
+        order:1;
+        
+    }
+    .nav-menu {
+        flex-direction: column;
+        display: none;
+        text-align: center;
+        
+        
+    }
+    .nav-menu li {
+        
+        padding: 10px 30px;
+        border: solid 1px black;
+    }
+    #burger:checked + .nav-menu {
+        display:flex;
+        align-self: center;
+        margin-top: 50px;
+        
+        z-index: 3;
+        
+    }
+    
+    
+    .navigation{
+        align-items: flex-start;
+        z-index: 3;
+    }
+  
+
 }
