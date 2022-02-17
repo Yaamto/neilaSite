@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
       <nav class="navigation">
        
        
-      <span>Lavoixlà</span>
+      <img class="logo"src="/images/Lavoixla_logo_RVB_fonce╠ü_x1.png" alt="Lavoixlà" height="80" width="100">
       
       <input type="checkbox" name="burger" id="burger">
       <ul class="nav-menu">
@@ -25,7 +25,7 @@
         <li><a href="#about" id="ite">A propos</a></li>
         <li><a href="#demos" id="ite">Démos</a></li>
         <li><a href="#refs" id="ite">Références</a></li>
-        <li><a href="./tarifs.html" id="ite">Mes services</a></li>
+        <li><a href="#services" id="ite">Mes services</a></li>
         <li><a href="#contact" id="ite">Contact</a></li>
       </ul>
       <label for="burger">
@@ -74,7 +74,7 @@ Ma plus grande satisfaction est d’embellir vos projets en y apportant égaleme
 
           </p>
           <p class="aboutMe-text">N’hésitez pas à me contacter </p>
-          <a href="#"><button class="demos-button">Me contacter</button></a>
+          <a href="#contact"><button class="demos-button">Me contacter</button></a>
           
         </div>
       </div>
@@ -300,6 +300,15 @@ Ma plus grande satisfaction est d’embellir vos projets en y apportant égaleme
           </div>
       </div>
     </section>
+    <section class="services" id="services">
+      <div class="title-display">
+        <div class="title-description">
+          <h1 class="titleSection">Mes Services </h1>
+          <h3 class="mini-title right-title">Ce que je propose</h3>
+        </div>
+        
+      </div>
+    </section>
     <section class="contact" id="contact">
       <div class="title-display">
         <div class="title-description">
@@ -315,7 +324,7 @@ Ma plus grande satisfaction est d’embellir vos projets en y apportant égaleme
           par mail ou bien ren remplissant directement le formulaire ci-dessous !
       </p>
 
-      <form action="">
+      <form action="" id="contact-form" onsubmit="sendMail(event)">
         <div class="first-part-form">
           <div class="single-input">
             <label for="name">Nom</label>
@@ -325,23 +334,37 @@ Ma plus grande satisfaction est d’embellir vos projets en y apportant égaleme
         <label for="firstName">Prénom</label>
         <input type="text" id="firstName" placeholder="Prénom..." required>
           </div>
+        </div>
+        <div class="first-part-form">
           <div class="single-input">
         <label for="email">Email</label>
         <input type="text" id="email" placeholder="Email..." required>
+        <p class="error" style="margin: 0; color:red; font-size: 15px;"></p>
           </div>
           <div class="single-input">
         <label for="sujet">Sujet</label>
         <input type="text" id="sujet" placeholder="Sujet..." required>
          </div>
+         
          </div>
          <div class="message-input">
           <label for="message">Message</label>
           <textarea id="message" name="message" placeholder="Ecrivez votre message..." required></textarea>
+          <button class="demos-button btn-input" type="submit">Envoyer</button>
          </div>
+
+         <img class ="email"src="/images/3d-fluency-mail-white.png" height="500" width="500" alt="">
       
       </form>
     </section>
-    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+(function() {
+emailjs.init("user_bb11d64gH23dNX1cxYu8u");
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
     <script src="/index.js"></script>
+    
 </body>
 </html>

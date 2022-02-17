@@ -8,7 +8,7 @@ body {
 }
 
 .scroll{
-    background-color: transparent!important;
+    background-color: rgb(240, 240, 240)!important;
     transition: 0.3s;
 }
 
@@ -244,7 +244,18 @@ font-size:  20fpx;
     .mini-title{
         font-size: 25px;
     }
+    .email{
+        width: 350px;
+        height: 350px;
+        bottom: 30%!important;
+    }
+    .logo{
+        height: 65px;
+        width: 80px;
+    }
   }
+
+
   @media screen and (max-width: 921px) {
     .main-About{
         flex-direction: column;
@@ -274,6 +285,13 @@ font-size:  20fpx;
     .desc-ref{
         width: 85%!important;
     }
+    .single-input input{
+        width: 200px!important;
+    }
+    textarea{
+        width: 450px;
+    }
+    
     
   }
   @media screen and (max-width: 600px) {
@@ -331,6 +349,19 @@ font-size:  20fpx;
     }
     .modal-btn{
         font-size: 20px!important;
+    }
+    .single-input input {
+        width: 200px;
+    }
+    textarea{
+        width: 250px!important;
+        
+    }
+    .message-input {
+        margin-left: 20%!important;
+    }
+    .btn-input{
+        margin-left: 20px!important;
     }
   }
 
@@ -584,6 +615,7 @@ font-size:  20fpx;
     position: relative;
     width: 90vw;
     margin-top: 100px;
+    margin-bottom: 50px;
     
   }
 
@@ -619,12 +651,13 @@ font-size:  20fpx;
       margin-top: 100px;
       font-family: 'Italiana', serif;
       font-size: 24px;
+      margin-left: 20%;
   }
   .first-part-form{
       display: flex;
-      flex-wrap: wrap;
+
       max-width: 50%;
-      margin-left: 100px;
+      
       justify-content: space-between;
   }
   .single-input{
@@ -648,28 +681,37 @@ font-size:  20fpx;
   }
   .single-input input:focus{
     outline: none;
-    
+   text-align:center ;
     
 }
   .single-input input::placeholder{
     padding-left: 10px;
 }
 .message-input{
-    margin-left: 100px;
+   
     padding:10px;
     display: flex;
     flex-direction: column;
     color:white;
     margin-top: 40px;
 }
+.message-input label {
+    margin-left: 5px;
+}
 textarea{
     height: 200px;
     border-radius: 30px;
-    width: 60%;
+    width: 600px;
+}
+textarea::placeholder{
+    padding-left: 10px;
+    
 }
 
 textarea:focus{
     outline: none;
+    padding-left: 20px;
+    padding-top: 5px;
 }
  
 
@@ -678,7 +720,8 @@ textarea:focus{
     background-repeat: no-repeat;
     
     width: 75%;
-    height: 100vh;
+    
+    position: relative;
   }
   .contact-paraph{
       max-width: 55%;
@@ -690,7 +733,18 @@ textarea:focus{
 
       
   }
+
+  .btn-input{
+      width:200px;
+      margin-left: 20%;
+      margin-top: 30px;
+  }
   
+  .email{
+      position: absolute;
+      left: 80%;
+  bottom: 20%;
+  }
   
 /* MENU NAV BURGER  */
 
@@ -761,5 +815,76 @@ nav label{
         z-index: 3;
     }
   
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .email{
+       display: none;
+    }
+    .contact{
+        width: 100%;
+    }
+    form {
+       
+    }
+  }
+
+  @media screen and (max-width: 765px) {
+
+   
+   
+    form {
+       margin-left: 15%;
+       margin-top: 70px;
+    }
+  }
+
+  @media screen and (max-width: 665px) {
+
+    .first-part-form{
+        flex-wrap: wrap;
+    }
+    .single-input{
+        margin-left: 50%;
+    }
+    .single-input label {
+        font-size: 18px;
+    }
+    .message-input label {
+        font-size: 18px;
+    }
+    .message-input textarea {
+
+        height: 100px;
+        width: 400px;
+    }
+    .contact-paraph{
+        max-width: 70%;
+        transform: translate(30%,50%);
+        font-size: 18px;
+    }
+    form {
+        margin-top: 50px;
+    }
+    .message-input {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .contact-paraph{
+        
+        transform: translate(20%,50%);
+        font-size: 17px;
+    }
+    form{
+        margin-left: 0px!important;
+    }
+    .message-input {
+        margin-left: 30px;
+    }
 
 }

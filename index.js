@@ -64,3 +64,63 @@ function toggleModal(){
 }
 
 
+// EMAAAAIL
+
+var btn = document.querySelector('.btn-input')
+
+async function sendMail(event){
+	event.preventDefault();
+
+	var email = document.getElementById("email").value
+	function validEmail(email) {
+		var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		var result = re.test(email)
+		;
+
+		return result
+	};
+
+	document.getElementById("email").addEventListener("change", function(){
+		document.querySelector('.error').innerHTML =""
+	})
+	const response = validEmail(email)
+	btn.innerHTML ="Envoie en cours..."
+	
+	toName="Neila"
+	var tempParams= {
+		from_name:document.getElementById("name").value +' '+ document.getElementById('firstName').value,
+		to_name: toName,
+		userEmail: email,
+		subject: document.getElementById('sujet').value,
+		message:document.getElementById('message').value
+		
+	}
+	
+	if(response === true) {
+	await emailjs.send('service_91aoy7e','template_vgtj517', tempParams)
+	.then(function(res){
+		
+		var notyf = new Notyf();
+		notyf.success('Votre message a été envoyé avec succès');
+		btn.innerHTML = "Message envoyé"
+		console.log("success", res.status)
+		console.log(tempParams)
+		document.getElementById('contact-form').reset()
+		
+	}, (error) => console.log(error))
+
+} else (
+	document.querySelector('.error').innerHTML = "L'adresse mail n'est pas valide"
+)
+}
+
+
+
+// Display an error notification
+
+
+// Display a success notification
+
+
+
+
