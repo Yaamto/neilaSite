@@ -29,6 +29,10 @@ main {
 }
 a:visited {
     color: black;
+    color: inherit;
+}
+a:link{
+    text-decoration: none;
 }
 
 .nav-menu {
@@ -463,10 +467,10 @@ font-size:  20fpx;
 }
 .single-ref{
     display: flex;
-    margin-left: 10%;
+    margin-left: 20%;
 }
 .single-ref:nth-child(odd){
-    margin-left: 15%;
+    margin-left: 25%;
 }
 .company{
     margin-bottom: 8px;
@@ -629,7 +633,7 @@ font-size:  20fpx;
     top: 0;
   }
   .slider .slide-track {
-    animation: scroll 40s linear infinite;
+    animation: scroll 20s linear infinite;
     display: flex;
     width: calc(250px * 14);
   }
@@ -745,6 +749,77 @@ textarea:focus{
       left: 80%;
   bottom: 20%;
   }
+
+  /* FOOTER */
+
+  footer{
+      background-color: #202020;
+      width: 75%;
+      margin: 0;
+  }
+  footer p {
+      padding-top:50px ;
+      margin: 0;
+      text-align: center;
+      font-size: 30px;
+    font-family: 'Italiana', serif;
+    color: white;
+  }
+
+  /* SERVICES */
+
+  .service-card{
+      background-color: #FAFAFA;
+      width: 270px;
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.13);
+      border-radius: 20px;
+      justify-content: space-around;
+      padding: 20px;
+      font-family: 'roboto', sans-serif;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 25px;
+      color: black;
+      margin:60px;
+     
+  }
+ .row {
+     display: flex;
+     justify-content: center;
+ }
+ .service-infos{
+    font-family: 'roboto', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    
+ }
+ .bas{
+     margin:20px 100px
+ }
+  
+
+  .btn-card {
+    box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.13);
+    border-radius: 15px;
+    background-color: #202020;
+    color:white;
+    font-family: 'dosis', sans-serif;
+    border: none;
+    width: 50%;
+    font-size: 18px;
+    padding: 5px 0;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .btn-card:hover{
+      background-color: #6b6b6b;
+      transform: scale(1.1);
+      
+  }
   
 /* MENU NAV BURGER  */
 
@@ -814,7 +889,9 @@ nav label{
         align-items: flex-start;
         z-index: 3;
     }
-  
+  .bas{
+      margin: 20px 20px;
+  }
 
 }
 
@@ -826,9 +903,22 @@ nav label{
     .contact{
         width: 100%;
     }
-    form {
-       
+    .all-cards{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
+    .row{
+        display: block;
+    }
+    .service-card{
+        width: 210px;
+        font-size: 16px;
+    }
+    footer {
+        width: 100%;
+    }
+   
   }
 
   @media screen and (max-width: 765px) {
@@ -838,6 +928,11 @@ nav label{
     form {
        margin-left: 15%;
        margin-top: 70px;
+    }
+    .service-card{
+        width:300px;
+        margin: 25px 15px;
+       
     }
   }
 

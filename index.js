@@ -84,8 +84,9 @@ async function sendMail(event){
 		document.querySelector('.error').innerHTML =""
 	})
 	const response = validEmail(email)
+	if(response === true){
 	btn.innerHTML ="Envoie en cours..."
-	
+	}
 	toName="Neila"
 	var tempParams= {
 		from_name:document.getElementById("name").value +' '+ document.getElementById('firstName').value,
@@ -116,10 +117,7 @@ async function sendMail(event){
 
 
 
-// Display an error notification
 
-
-// Display a success notification
 
 
 
